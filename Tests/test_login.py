@@ -25,7 +25,7 @@ class TestLogin(BaseTest):
     def test_login_with_valid_email_and_invalid_password(self):
         homepage = HomePage(self.driver)
         login_page=homepage.navigate_to_login_page()
-        login_page.login_to_application("vrindamb1@gmail.com","1234567")
+        login_page.login_to_application("vrindamb1@gmail.com","123456789")
         expected_warning_message = "Warning: No match for E-Mail Address and/or Password."
         assert login_page.retrieve_warning_message().__eq__(expected_warning_message)
 
